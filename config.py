@@ -20,7 +20,7 @@ def centralized_args():
     parser.add_argument('--lr', type=float, default=1e-3, help="The learning rate to use.")
     parser.add_argument('--optimizer', type=str, default="adam", choices=["adam", "sgd"], help="The optimizer to use.")
     parser.add_argument('--criterion', type=str, default="cross_entropy",choices=["mse", "cross_entropy", "nlloss", "l1"], help="The criterion to use.")
-    parser.add_argument('--device', type=str, default='cuda', help="Choose between cpu and cuda")
+    parser.add_argument('--device', type=str, default='cpu', help="Choose between cpu and cuda")
     parser.add_argument('--early_stopping', type=str2bool, default=True, help="Whether to use early stopping.")
     parser.add_argument('--patience', type=int, default=50, help="The patience value for early stopping.")
 
@@ -37,7 +37,7 @@ def federated_args():
     parser.add_argument('--lr', type=float, default=1e-3, help="The learning rate to use.")
     parser.add_argument('--optimizer', type=str, default="adam", choices=["adam", "sgd"], help="The optimizer to use.")
     parser.add_argument('--criterion', type=str, default="cross_entropy",choices=["mse", "cross_entropy", "nlloss", "l1"], help="The criterion to use.")
-    parser.add_argument('--device', type=str, default='cuda', help="Choose between cpu and cuda")
+    parser.add_argument('--device', type=str, default='cpu', help="Choose between cpu and cuda")
     parser.add_argument('--early_stopping', type=str2bool, default=True, help="Whether to use early stopping.")
     parser.add_argument('--patience', type=int, default=50, help="The patience value for early stopping.")
     parser.add_argument('--test_size', type=float, default=0.2, help="The fraction of samples to use for testing.")
